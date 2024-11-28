@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Rental Website</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Include EmailJS library -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <a href="#" class="logo">AIR-RENT</a>
+    <nav>
+      <ul>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Find Your Perfect Stay</h1>
+      <p>Explore homes, cabins, and apartments across the globe.</p>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search destinations...">
+        <button onclick="searchProperties()">Search</button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Properties Section -->
+  <section id="properties" class="cards">
+    <div class="card">
+      <img src="property1.jpeg" alt="Property 1">
+      <div class="card-content">
+        <h3>Cozy Mountain Cabin</h3>
+        <p>$120/night - Colorado</p>
+        <button onclick="bookNow('Cozy Mountain Cabin')">Book Now</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="property2.jpeg" alt="Property 2">
+      <div class="card-content">
+        <h3>Beachside Villa</h3>
+        <p>$250/night - Malibu</p>
+        <button onclick="bookNow('Beachside Villa')">Book Now</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="property3.jpeg" alt="Property 3">
+      <div class="card-content">
+        <h3>City Center Loft</h3>
+        <p>$150/night - New York</p>
+        <button onclick="bookNow('City Center Loft')">Book Now</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="country side image.jpg" alt="Country Side House">
+      <div class="card-content">
+        <h3>COUNTRY SIDE HOUSE</h3>
+        <p>$175/night - New York</p>
+        <button onclick="bookNow('COUNTRY SIDE HOUSE')">Book Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-container">
+      <h2>About Us</h2>
+      <p>At AIR-RENT, we are dedicated to making your travel experience seamless and memorable. With a curated selection of properties around the world, we provide comfort and convenience for every type of traveler.</p>
+      <div class="about-content">
+        <div class="about-image">
+          <img src="team.jpg" alt="Team at AIR-RENT">
+        </div>
+        <div class="about-details">
+          <h3>Our Mission</h3>
+          <p>We strive to connect people with unique and inspiring places to stay. Whether you are looking for a cozy mountain cabin or a luxurious villa by the sea, we are here to find the perfect match for you.</p>
+          <h3>Our Values</h3>
+          <ul>
+            <li>Integrity and trust</li>
+            <li>Customer-centric service</li>
+            <li>Quality and comfort</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <p>Have questions or need assistance? Reach out to us, and we'll get back to you as soon as possible.</p>
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <input type="hidden" name="access_key" value="c993c66f-d8e1-41f8-b772-7bd68b9b768a">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+      <div id="form-status"></div>
+    </div>
+  </section>
+  
+  
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 AIR-RENT. All rights reserved.</p>
+    <a href="#terms">Terms</a>
+    <a href="#privacy">Privacy</a>
+  </footer>
+</body>
+</html>
